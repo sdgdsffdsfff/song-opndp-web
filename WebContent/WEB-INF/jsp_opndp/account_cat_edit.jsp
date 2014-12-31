@@ -12,7 +12,7 @@
 <table class="no-style">
 	<thead>
 		<tr>
-			<th></th>
+			<th> </th>
 			<th>
 				序号
 			</th>
