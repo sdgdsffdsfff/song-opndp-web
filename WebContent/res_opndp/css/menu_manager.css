@@ -1,0 +1,28 @@
+.menu-table {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.5;
+	background: white;
+}
+
+.menu-table th,.menu-table td {
+	padding: 5px 8px;
+	vertical-align: top;
+	text-align: left;
+	border-bottom: 1px dotted #ddd !important;
+}
+
+.menu-table td {
+	border: 1px dotted #ddd !important;
+}
+
+.menu-sub {
+	padding-bottom: 7px;
+	font-weight: bold;
+}
+
+.menu-opern-ul li {
+	list-style-type: disc;
+	margin-left: 12px;
+}
