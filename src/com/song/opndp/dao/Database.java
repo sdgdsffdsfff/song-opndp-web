@@ -40,8 +40,8 @@ public class Database {
 		ACCOUNT,
 		/** 密码 */
 		PASSWORD,
-		/** 昵称 */
-		NICK_NAME,
+		/** 姓名 */
+		ADMIN_NAME,
 		/** 用户头像 */
 		PHOTO_PATH,
 		/** 邮箱 */

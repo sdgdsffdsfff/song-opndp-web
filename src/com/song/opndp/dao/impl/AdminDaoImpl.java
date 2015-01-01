@@ -21,7 +21,7 @@ public class AdminDaoImpl extends BasicDao<Admin> implements AdminDao {
 		a.setAdminId(rs.getLong(AdminF.ADMIN_ID.name()));
 		a.setEmail(rs.getString(AdminF.EMAIL.name()));
 		a.setGender(rs.getInt(AdminF.GENDER.name()));
-		a.setNickName(rs.getString(AdminF.NICK_NAME.name()));
+		a.setAdminName(rs.getString(AdminF.ADMIN_NAME.name()));
 		a.setPassword(rs.getString(AdminF.PASSWORD.name()));
 		a.setPhone(rs.getString(AdminF.PHONE.name()));
 		a.setPhotoPath(rs.getString(AdminF.PHOTO_PATH.name()));
@@ -44,7 +44,7 @@ public class AdminDaoImpl extends BasicDao<Admin> implements AdminDao {
 		fields.append(tabPoint).append(AdminF.ADMIN_ID).append(",");
 		fields.append(tabPoint).append(AdminF.EMAIL).append(",");
 		fields.append(tabPoint).append(AdminF.GENDER).append(",");
-		fields.append(tabPoint).append(AdminF.NICK_NAME).append(",");
+		fields.append(tabPoint).append(AdminF.ADMIN_NAME).append(",");
 		fields.append(tabPoint).append(AdminF.PASSWORD).append(",");
 		fields.append(tabPoint).append(AdminF.PHONE).append(",");
 		fields.append(tabPoint).append(AdminF.PHOTO_PATH).append(",");
@@ -60,7 +60,7 @@ public class AdminDaoImpl extends BasicDao<Admin> implements AdminDao {
 	@Override
 	protected Object[] getParams(Admin t) {
 		return new Object[] { t.getAddTime(), t.getAccount(), t.getAdminId(),
-				t.getEmail(), t.getGender(), t.getNickName(), t.getPassword(),
+				t.getEmail(), t.getGender(), t.getAdminName(), t.getPassword(),
 				t.getPhone(), t.getPhotoPath(), t.getUserId() };
 	}
 
@@ -72,9 +72,9 @@ public class AdminDaoImpl extends BasicDao<Admin> implements AdminDao {
 
 		List<Object> params = new ArrayList<Object>();
 		sqlWhere.append(" where 1=1 ");
-		if (t.getNickName() != null && !"".equals(t.getNickName())) {
-			sqlWhere.append(" and ").append(AdminF.NICK_NAME).append(" like ?");
-			params.add("%" + t.getNickName() + "%");
+		if (t.getAdminName() != null && !"".equals(t.getAdminName())) {
+			sqlWhere.append(" and ").append(AdminF.ADMIN_NAME).append(" like ?");
+			params.add("%" + t.getAdminName() + "%");
 		}
 		if (t.getUserId() != null) {
 			sqlWhere.append(" and ").append(AdminF.USER_ID).append("=?");

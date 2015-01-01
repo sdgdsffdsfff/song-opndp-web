@@ -22,8 +22,8 @@ public class Admin extends LazyLoadEntity implements java.io.Serializable {
 	private String account;
 	/** 密码 */
 	private String password;
-	/** 昵称 */
-	private String nickName;
+	/** 姓名 */
+	private String adminName;
 	/** 用户头像 */
 	private String photoPath;
 	/** 邮箱 */
@@ -101,14 +101,14 @@ public class Admin extends LazyLoadEntity implements java.io.Serializable {
 		this.adminId = adminId;
 	}
 
-	/** 昵称 */
-	public String getNickName() {
-		return nickName;
+	/** 姓名 */
+	public String getAdminName() {
+		return adminName;
 	}
 
-	/** 昵称 */
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
+	/** 姓名 */
+	public void setAdminName(String adminName) {
+		this.adminName = adminName;
 	}
 
 	/** 账号 */
