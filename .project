@@ -3,7 +3,6 @@
 	<name>song-opndp-web</name>
 	<comment></comment>
 	<projects>
-		<project>song-commons</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
